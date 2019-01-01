@@ -20,7 +20,7 @@ NEEDED_FIELDS = ["dbfId", "cardClass", "collectible", "cost", "name", "mechanics
 
 with open('cards.csv', 'w') as csvfile:
     MYWRITER = csv.writer(csvfile, delimiter=',', quotechar='`', quoting=csv.QUOTE_MINIMAL)
-    MYWRITER.writerow([field for field in NEEDED_FIELDS])
+    MYWRITER.writerow(NEEDED_FIELDS) #add csv header
     for card in CARDS:
         for field in NEEDED_FIELDS:
             if field in list(card.keys()):
