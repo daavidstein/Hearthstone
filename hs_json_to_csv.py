@@ -5,7 +5,6 @@ including only those fields in the list NEEDED_FIELDS"""
 import csv
 import json
 import requests
-MYDICT = {'a':3, 'b':2, 'c':3, 'd':4}
 
 
 CARDDATA = requests.get("https://api.hearthstonejson.com/v1/25770/enUS/cards.json")
